@@ -4,7 +4,7 @@ import './App.css';
 import FoodItem from './FoodItem';
 
 class App extends Component {
-  constructor(props) {
+  constructor(props) { // why pass props?
     super(props);
     this.state = {
       favoriteFoods: ['lettuce', 'carrots', 'beets', 'beans', 'air']
@@ -12,7 +12,7 @@ class App extends Component {
   }
   render() {
 
-    const favFoods = this.state.favoriteFoods.map( item, i => {
+    const favFoods = this.state.favoriteFoods.map( item => {
         return <FoodItem foodItem={item}/>
     })
 
